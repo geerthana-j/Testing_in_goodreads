@@ -9,8 +9,8 @@ describe('Goodreads Automation Test', () => {
     cy.contains('Sign In').click();
    
     cy.contains('Sign in with email').click();
-    cy.get('input[name="user[email]"]').type(email);
-    cy.get('input[name="user[password]"]').type(password);
+    cy.get('input[type="email"]').type(email);
+    cy.get('input[type="password"]').type(password);
     cy.get('input[type="submit"]').click();
     cy.contains('Find & read books').should('be.visible');
   });
